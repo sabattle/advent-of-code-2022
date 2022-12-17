@@ -1,0 +1,56 @@
+{
+  "name": "advent-of-code-2022",
+  "version": "0.0.1",
+  "description": "Solutions for Advent of Code 2022",
+  "type": "module",
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/node": "^18.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint --ext .js,.ts --fix .",
+    "check": "prettier --ignore-path .gitignore --check .",
+    "format": "prettier --ignore-path .gitignore --write .",
+    "precommit": "npx lint-staged",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabattle/advent-of-code-2022.git"
+  },
+  "author": "Sebastian Battle",
+  "bugs": {
+    "url": "https://github.com/sabattle/advent-of-code-2022/issues"
+  },
+  "homepage": "https://github.com/sabattle/advent-of-code-2022#readme",
+  "lint-staged": {
+    "**/*.{js,ts}": "eslint --ext .js,.ts",
+    "**/*.{js,ts,json,md}": "prettier --ignore-path .gitignore --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
