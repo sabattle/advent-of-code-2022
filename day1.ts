@@ -17,14 +17,8 @@ function part1(lines: string[]): number[] {
 }
 
 function part2(values: number[]): void {
-  const maxValues: number[] = []
-  for (let i = 0; i < 3; i++) {
-    const max = Math.max(...values)
-    maxValues.push(max)
-    values = values.filter((v) => v != max)
-  }
-
-  console.log(maxValues.reduce((a, b) => a + b, 0))
+  values = values.sort((a, b) => b - a)
+  console.log(values.slice(0, 3).reduce((a, b) => a + b, 0))
 }
 
 function main(): void {
