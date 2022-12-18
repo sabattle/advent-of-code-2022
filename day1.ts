@@ -7,6 +7,7 @@ function part1(lines: string[]): number[] {
   let _values: number[] = []
   lines.forEach((line) => {
     if (line === '') {
+      // Assumes input file ends with newline
       values.push(_values.reduce((a, b) => a + b, 0))
       _values = []
     } else _values.push(parseInt(line))
